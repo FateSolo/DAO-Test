@@ -12,7 +12,7 @@ import java.util.List;
 @Transactional(rollbackFor = Exception.class)
 public class BookService {
 
-    @Resource(name = "bookDaoHibernateImpl")
+    @Resource(name = "bookDaoJpaImpl")
     private BookDao bookDao;
 
     public Book getBookById(int id) {
