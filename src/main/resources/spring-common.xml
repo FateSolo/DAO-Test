@@ -46,6 +46,11 @@
         <property name="poolPreparedStatements" value="false"/>
     </bean>
 
+    <!-- Spring Jdbc Template -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
     <!-- 配置事务 -->
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
