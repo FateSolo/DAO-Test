@@ -26,5 +26,6 @@ dependencies {
     compile 'org.springframework:spring-orm:4.3.7.RELEASE'
     compile 'org.springframework:spring-web:4.3.7.RELEASE'
     compile 'org.springframework:spring-webmvc:4.3.7.RELEASE'
+    compile 'org.springframework.data:spring-data-jpa:1.11.1.RELEASE'
 
 }
