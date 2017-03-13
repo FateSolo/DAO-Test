@@ -1,11 +1,19 @@
 package com.fatesolo.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "book")
 public class Book {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
     private String author;
 
     public int getId() {
