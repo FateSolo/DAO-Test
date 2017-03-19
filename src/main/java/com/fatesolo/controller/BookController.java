@@ -11,29 +11,25 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/book", produces = "application/json;charset=UTF-8")
+@RequestMapping(path = "/book")
 public class BookController {
 
     @Resource
     private BookService bookService;
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
-    public String getBookById(@PathVariable int id) {
-        Book book = bookService.getBookById(id);
-
-        return book != null ? book.toString() : "Not Found";
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET, produces = "application/xml")
+    public Book getBookById(@PathVariable int id) {
+        return bookService.getBookById(id);
     }
 
-    @RequestMapping(path = "/name/{name}", method = RequestMethod.GET)
-    public String getBooksByName(@PathVariable String name) {
-        List<Book> books = bookService.getBooksByName(name);
-
-        return books.size() != 0 ? books.toString() : "Not Found";
+    @RequestMapping(path = "/name/{name}", method = RequestMethod.GET, produces = "application/json")
+    public List<Book> getBooksByName(@PathVariable String name) {
+        return bookService.getBooksByName(name);
     }
 
     @RequestMapping(path = "", method = RequestMethod.POST)
-    public String addBook(Book book) {
-        return bookService.addBook(book) ? book.toString() : "Failure";
+    public Book addBook(Book book) {
+        return bookService.addBook(book) ? book : null;
     }
 
 }

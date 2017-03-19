@@ -1,9 +1,11 @@
 package com.fatesolo.entity;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "book")
+@XmlRootElement
 public class Book {
 
     @Id
