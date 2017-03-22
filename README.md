@@ -1,5 +1,5 @@
 # DAO-Test
-dao层多种实现方法Demo
+DAO层多种实现方法Demo
 
 ### 目录：
 * [0. 项目搭建](http://fatesolo.github.io/2017/03/12/DAO-Test-0-Intro/)
