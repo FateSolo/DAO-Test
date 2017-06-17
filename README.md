@@ -9,4 +9,3 @@ DAO层多种实现方法Demo
 * [4. Hibernate](http://fatesolo.github.io/2017/03/12/DAO-Test-4-Hibernate/)
 * [5. JPA](http://fatesolo.github.io/2017/03/12/DAO-Test-5-JPA/)
 * [6. Spring-Data-JPA](http://fatesolo.github.io/2017/03/12/DAO-Test-6-SpringDataJPA/)
-
